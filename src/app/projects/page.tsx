@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/ui/Navbar";
-import { Footer } from "@/components/ui/Footer";
 import { ProjectShowcase } from "@/components/home/ProjectShowcase";
 
 export default function ProjectsPage() {
@@ -11,7 +10,6 @@ export default function ProjectsPage() {
         <p className="text-off-white/90 max-w-2xl mx-auto uppercase tracking-widest text-sm">A legacy of excellence built over three decades.</p>
       </div>
       <ProjectShowcase />
-      <Footer />
     </main>
   );
 }

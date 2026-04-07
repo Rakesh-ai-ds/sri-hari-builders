@@ -2,7 +2,6 @@
 
 import { useParams } from "next/navigation";
 import { Navbar } from "@/components/ui/Navbar";
-import { Footer } from "@/components/ui/Footer";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -163,7 +162,6 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

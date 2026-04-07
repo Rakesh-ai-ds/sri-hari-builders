@@ -1,5 +1,4 @@
 import { Navbar } from "@/components/ui/Navbar";
-import { Footer } from "@/components/ui/Footer";
 import { Services as ServicesSection } from "@/components/home/Services";
 
 export default function ServicesPage() {
@@ -11,7 +10,6 @@ export default function ServicesPage() {
         <p className="text-off-white/90 max-w-2xl mx-auto uppercase tracking-widest text-sm">Comprehensive architectural and construction solutions.</p>
       </div>
       <ServicesSection />
-      <Footer />
     </main>
   );
 }
