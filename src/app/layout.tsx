@@ -7,6 +7,34 @@ import { CustomCursor } from '@/components/ui/CustomCursor';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { ReactNode } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Sri Hari Builder & Promoters | Luxury Real Estate & Engineering Excellence in Coimbatore',
+  description: "Coimbatore's premier engineering house since 1995. Specializing in luxury residential villas, apartments, and premium commercial developments with zero compromise on structural integrity.",
+  keywords: 'Sri Hari Builders, Luxury Villas Coimbatore, Real Estate Coimbatore, Construction Company, Engineering Excellence, Premium Apartments, Sri Hari Promoters',
+  openGraph: {
+    title: 'Sri Hari Builder & Promoters | Luxury Real Estate',
+    description: "Coimbatore's premier engineering house since 1995.",
+    url: 'https://sriharibuilders.com',
+    siteName: 'Sri Hari Builder & Promoters',
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sri Hari Builder & Promoters | Luxury Real Estate',
+    description: "Coimbatore's premier engineering house since 1995.",
+    images: ['/logo.png'],
+  },
+};
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
