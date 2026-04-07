@@ -28,7 +28,7 @@ export const AboutPreview = () => {
           </h2>
           
           <p className="text-off-white/80 text-lg leading-relaxed mb-10 max-w-xl">
-            Since 1995, Sri Hari Builder & Promoters has been the cornerstone of Coimbatore's skyline. We don't just build structures; we craft <span className="text-white font-bold italic">generational legacies</span> with engineering precision and absolute transparency. Your dream isn't just a project—it's our <span className="text-gold font-bold">reputation</span>.
+            Since 1995, Sri Hari Builder & Promoters has been the cornerstone of Coimbatore&apos;s skyline. We don&apos;t just build structures; we craft <span className="text-white font-bold italic">generational legacies</span> with engineering precision and absolute transparency. Your dream isn&apos;t just a project—it&apos;s our <span className="text-gold font-bold">reputation</span>.
           </p>
 
           <div className="grid grid-cols-2 gap-8 mb-12">
@@ -64,9 +64,11 @@ export const AboutPreview = () => {
             className="relative z-10"
           >
             <div className="absolute -inset-4 border border-gold/20 rounded-2xl -z-10 group-hover:inset-0 transition-all duration-700" />
-            <img 
+            <Image 
               src="/about-preview-main.png" 
               alt="Premium Architecture" 
+              width={800}
+              height={600}
               className="w-full h-[600px] object-cover rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 grayscale-50"
             />
           </motion.div>
@@ -77,9 +79,11 @@ export const AboutPreview = () => {
             transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
             className="absolute -bottom-12 -right-8 md:-right-12 z-20 w-1/2 overflow-hidden rounded-xl border-4 border-charcoal shadow-2xl"
           >
-             <img 
+             <Image 
               src="/about-preview-small.png" 
               alt="Detailed Craftsmanship" 
+              width={400}
+              height={300}
               className="w-full h-full object-cover aspect-video"
             />
           </motion.div>

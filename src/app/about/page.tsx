@@ -1,12 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const timeline = [
   { year: "1995", event: "Foundation of Sri Hari Builder & Promoters with a vision for excellence." },
   { year: "2002", event: "Completed our first landmark residential project in Chennai." },
   { year: "2010", event: "Expanded operations into premium commercial developments." },
-  { year: "2018", event: "Awarded 'Best Luxury Developer' for our sustainable design initiatives." },
+  { year: "2018", event: "Awarded &apos;Best Luxury Developer&apos; for our sustainable design initiatives." },
   { year: "2024", event: "pioneering smart home integration in all our upcoming luxury estates." },
 ];
 
@@ -25,7 +26,7 @@ export default function AboutPage() {
             Built on <span className="text-gold italic underline decoration-white/10 underline-offset-8">Vision</span>,<br />Driven by <span className="text-white">Reputation</span>.
           </h1>
           <p className="text-off-white/80 text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed">
-            Sri Hari Builder & Promoters (SHB) is Coimbatore's premier engineering house. Since 1995, we have specialized in transforming complex blueprints into <span className="text-white font-bold">architectural landmarks</span>. Our approach is simple: <span className="text-gold italic font-bold">zero compromise</span> on structural integrity and complete transparency in every brick laid.
+            Sri Hari Builder & Promoters (SHB) is Coimbatore&apos;s premier engineering house. Since 1995, we have specialized in transforming complex blueprints into <span className="text-white font-bold">architectural landmarks</span>. Our approach is simple: <span className="text-gold italic font-bold">zero compromise</span> on structural integrity and complete transparency in every brick laid.
           </p>
         </motion.div>
       </section>
@@ -92,10 +93,11 @@ export default function AboutPage() {
         </motion.div>
         
         <div className="relative h-[600px] overflow-hidden rounded-2xl group border border-white/10 shadow-2xl">
-          <img 
+          <Image 
             src="/about-engineering.png" 
             alt="Engineering Excellence" 
-            className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000"
+            fill
+            className="object-cover group-hover:scale-110 transition-all duration-1000"
           />
         </div>
       </section>

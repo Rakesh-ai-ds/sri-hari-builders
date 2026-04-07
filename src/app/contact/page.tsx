@@ -24,7 +24,7 @@ export default function ContactPage() {
         >
           <span className="text-gold uppercase tracking-[0.5em] text-xs font-bold mb-6 inline-block">Get in Touch</span>
           <h1 className="text-5xl md:text-8xl font-serif text-charcoal leading-tight mb-12">
-            Let's <span className="text-gold italic">Connect</span>.
+            Let&apos;s <span className="text-gold italic">Connect</span>.
           </h1>
           <p className="text-charcoal/80 text-lg md:text-xl max-w-xl mb-16 leading-relaxed">
             Reach out for a private consultation and discover how we can transform your vision into an iconic architectural masterpiece.

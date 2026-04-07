@@ -27,7 +27,7 @@ export const Footer = () => {
             </div>
           </Link>
           <p className="text-off-white/80 text-sm leading-relaxed mb-6">
-            Sri Hari Builder & Promoters (SHB) is Coimbatore's premier engineering house. Since 1995, we have been building generational legacies through <span className="text-white font-bold">architectural beauty</span> and <span className="text-white font-bold">structural precision</span>.
+            Sri Hari Builder & Promoters (SHB) is Coimbatore&apos;s premier engineering house. Since 1995, we have been building generational legacies through <span className="text-white font-bold">architectural beauty</span> and <span className="text-white font-bold">structural precision</span>.
           </p>
           <div className="flex space-x-4">
             <a href="https://www.facebook.com/share/1NkGcyHxAX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="p-2 border border-white/10 rounded-full hover:border-gold transition-colors"><Facebook size={16} /></a>

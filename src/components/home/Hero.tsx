@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Hero = () => {
   const ref = useRef(null);
@@ -21,10 +22,12 @@ export const Hero = () => {
         className="absolute inset-0 z-0"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-charcoal z-10" />
-        <img 
+        <Image 
           src="/hero-bg.png" 
           alt="Luxury Architecture" 
-          className="w-full h-full object-cover opacity-60"
+          fill
+          priority
+          className="object-cover opacity-60"
         />
       </motion.div>
 
