@@ -331,20 +331,23 @@ export const ContentManager = ({ section: initialSection }: { section: string })
 
       {/* Modal / Sidepanel */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 backdrop-blur-md bg-charcoal/40">
-          <div className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl relative overflow-hidden max-h-[90vh] overflow-y-auto">
-            <div className="absolute top-0 left-0 w-full h-2 bg-gold" />
-            <div className="p-10">
-              <div className="flex justify-between items-center mb-8">
-                <h3 className="text-2xl font-serif text-charcoal">
-                  {editingItem ? "Edit Progress Update" : "Add New Update"}
-                </h3>
-                <button onClick={resetForm} className="p-2 hover:bg-charcoal/5 rounded-full transition-colors">
-                  <X size={24} className="text-charcoal/40" />
-                </button>
-              </div>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 backdrop-blur-md bg-charcoal/40">
+          <div className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl relative flex flex-col max-h-[95vh] md:max-h-[90vh] overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-1.5 bg-gold z-10" />
+            
+            {/* Modal Header - Fixed */}
+            <div className="px-8 py-6 border-b border-charcoal/5 flex justify-between items-center bg-white z-10">
+              <h3 className="text-xl md:text-2xl font-serif text-charcoal">
+                {editingItem ? "Edit Progress Update" : "Add New Update"}
+              </h3>
+              <button onClick={resetForm} className="p-2 hover:bg-charcoal/5 rounded-full transition-colors">
+                <X size={24} className="text-charcoal/40" />
+              </button>
+            </div>
 
-              <form onSubmit={handleSubmit} className="space-y-8">
+            {/* Modal Body - Scrollable */}
+            <div className="flex-1 overflow-y-auto px-8 py-8 custom-scrollbar">
+              <form id="update-form" onSubmit={handleSubmit} className="space-y-6">
                 <div 
                   className="relative h-64 border-2 border-dashed border-charcoal/10 rounded-2xl flex flex-col items-center justify-center bg-charcoal/5 overflow-hidden group cursor-pointer"
                   onClick={() => document.getElementById("img-upload")?.click()}
@@ -403,24 +406,26 @@ export const ContentManager = ({ section: initialSection }: { section: string })
                     placeholder="Describe the current progress at this stage..."
                   />
                 </div>
-
-                <div className="flex gap-4 pt-4">
-                  <button 
-                    type="button" 
-                    onClick={resetForm}
-                    className="flex-1 py-4 border border-charcoal/10 rounded-xl text-xs uppercase tracking-widest font-bold hover:bg-charcoal/5 transition-colors"
-                  >
-                    Cancel
-                  </button>
-                  <button 
-                    type="submit"
-                    disabled={uploading}
-                    className="flex-[2] py-4 bg-gold text-charcoal rounded-xl text-xs uppercase tracking-widest font-bold hover:shadow-lg hover:shadow-gold/20 flex items-center justify-center gap-3 disabled:opacity-50"
-                  >
-                    {uploading ? <Loader2 className="animate-spin" size={18} /> : (editingItem ? "Update Progress" : "Publish Progress")}
-                  </button>
-                </div>
               </form>
+            </div>
+
+            {/* Modal Footer - Fixed */}
+            <div className="px-8 py-6 border-t border-charcoal/5 bg-charcoal/[0.02] flex gap-4">
+              <button 
+                type="button" 
+                onClick={resetForm}
+                className="flex-1 py-4 border border-charcoal/10 rounded-xl text-[10px] uppercase tracking-widest font-bold hover:bg-white transition-all"
+              >
+                Cancel
+              </button>
+              <button 
+                type="submit"
+                form="update-form"
+                disabled={uploading}
+                className="flex-[2] py-4 bg-gold text-charcoal rounded-xl text-[10px] uppercase tracking-widest font-bold hover:shadow-lg hover:shadow-gold/20 flex items-center justify-center gap-3 disabled:opacity-50 transition-all"
+              >
+                {uploading ? <Loader2 className="animate-spin" size={18} /> : (editingItem ? "Update Progress" : "Publish Progress")}
+              </button>
             </div>
           </div>
         </div>
