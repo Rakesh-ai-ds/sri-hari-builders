@@ -43,7 +43,7 @@ export const ProjectShowcase = () => {
               Extraordinary <span className="text-gold italic">Creations</span>
             </h2>
           </div>
-          <Link href="/projects" className="group px-8 py-3 border border-charcoal/20 text-xs uppercase tracking-widest font-bold hover:bg-charcoal hover:text-off-white transition-all duration-300">
+          <Link href="/projects" className="group px-8 py-3 mx-auto md:mx-0 border border-charcoal/20 text-xs uppercase tracking-widest font-bold hover:bg-charcoal hover:text-off-white transition-all duration-300">
             View All Projects 
             <span className="ml-4 inline-block transition-transform group-hover:translate-x-2">→</span>
           </Link>
@@ -76,13 +76,12 @@ export const ProjectShowcase = () => {
                   className="object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
                 />
                 
-                {/* Modern Glass Reveal */}
-                <div className="absolute inset-0 bg-charcoal/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 backdrop-blur-[2px]" />
+                <div className="absolute inset-0 bg-charcoal/20 opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 backdrop-blur-[2px]" />
                 
-                <div className="absolute inset-x-8 bottom-8 p-10 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-out">
+                <div className="absolute inset-x-4 bottom-4 md:inset-x-8 md:bottom-8 p-6 md:p-10 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl transform translate-y-0 md:translate-y-10 opacity-100 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-700 ease-out">
                   <div className="flex justify-between items-end">
                     <div>
-                      <span className="text-gold uppercase tracking-[0.4em] text-[10px] mb-4 block font-bold">{project.category}</span>
+                      <span className="text-gold uppercase tracking-[0.4em] text-[8px] md:text-[10px] mb-2 md:mb-4 block font-bold">{project.category}</span>
                       <h3 className="text-white text-3xl font-serif leading-tight">{project.title}</h3>
                       <p className="text-white/90 text-xs mt-2 uppercase tracking-widest">{project.location}</p>
                     </div>

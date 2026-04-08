@@ -15,7 +15,7 @@ export const Hero = () => {
   const words = "Engineering Luxury, Redefined".split(" ");
 
   return (
-    <section ref={ref} className="relative h-[110vh] w-full overflow-hidden flex items-center justify-center bg-charcoal">
+    <section ref={ref} className="relative h-[90vh] md:h-[110vh] w-full overflow-hidden flex items-center justify-center bg-charcoal">
       {/* Background Image with Parallax */}
       <motion.div 
         style={{ y: y1, scale }}
@@ -32,19 +32,19 @@ export const Hero = () => {
       </motion.div>
 
       {/* Hero Content */}
-      <div className="relative z-20 text-center px-6">
+      <div className="relative z-20 text-center px-6 max-w-full overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-6 flex justify-center"
         >
-          <span className="px-4 py-1 border border-gold/50 text-gold text-xs uppercase tracking-[0.3em] backdrop-blur-md bg-gold/5 rounded-full">
+          <span className="px-4 py-1 border border-gold/50 text-gold text-[10px] md:text-xs uppercase tracking-[0.3em] backdrop-blur-md bg-gold/5 rounded-full">
             Est. 1995 • Sri Hari Builders
           </span>
         </motion.div>
 
-        <h1 className="text-5xl md:text-8xl font-serif text-white mb-8 overflow-hidden flex flex-wrap justify-center gap-x-4 md:gap-x-6">
+        <h1 className="text-4xl sm:text-5xl md:text-8xl font-serif text-white mb-8 overflow-hidden flex flex-wrap justify-center gap-x-2 md:gap-x-6">
           Engineering <span className="text-gold">Legacy</span>, Defining <span className="text-gold italic">Luxury</span>.
         </h1>
 
@@ -52,7 +52,7 @@ export const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
-          className="text-off-white text-lg md:text-2xl max-w-3xl mx-auto font-light leading-relaxed mb-12"
+          className="text-off-white text-base md:text-2xl max-w-3xl mx-auto font-light leading-relaxed mb-12 px-4"
         >
           Stop settling for ordinary. Experience <span className="text-white font-bold underline decoration-gold/50 underline-offset-8">35 years</span> of engineering precision that transforms your vision into a stable, <span className="text-white font-bold">world-class sanctuary</span>.
         </motion.p>
@@ -61,7 +61,7 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
-          className="flex flex-col md:flex-row items-center justify-center gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
         >
           <Link href="/about" className="group relative px-10 py-4 bg-gold text-charcoal font-bold uppercase tracking-widest text-xs transition-all duration-300 hover:pr-14 overflow-hidden">
             <span className="relative z-10">Explore Our Legacy</span>

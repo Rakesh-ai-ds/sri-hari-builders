@@ -62,7 +62,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="text-lg font-serif text-charcoal mb-2 uppercase tracking-widest text-xs">Email Address</h4>
-                <p className="text-charcoal/80 text-lg">sriharibuilderscbe@gmail.com</p>
+                <p className="text-charcoal/80 text-lg">sriharibuilder7@gmail.com</p>
               </div>
             </div>
           </div>

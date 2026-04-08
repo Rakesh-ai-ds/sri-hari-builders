@@ -77,7 +77,7 @@ export const AboutPreview = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-            className="absolute -bottom-12 -right-8 md:-right-12 z-20 w-1/2 overflow-hidden rounded-xl border-4 border-charcoal shadow-2xl"
+            className="absolute -bottom-6 -right-4 md:-bottom-12 md:-right-12 z-20 w-1/2 overflow-hidden rounded-xl border-4 border-charcoal shadow-2xl"
           >
              <Image 
               src="/about-preview-small.png" 
