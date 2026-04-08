@@ -59,9 +59,13 @@ export const ContentManager = ({ section }: { section: string }) => {
         ...doc.data()
       })) as ContentItem[];
       setItems(data);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error fetching items:", error);
-      toast.error("Failed to load content");
+      if (error.code === "failed-precondition") {
+        toast.error("Firestore Index needed! Check browser console for the link.", { duration: 6000 });
+      } else {
+        toast.error("Failed to load content");
+      }
     } finally {
       setLoading(false);
     }

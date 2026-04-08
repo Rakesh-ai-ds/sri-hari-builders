@@ -24,13 +24,18 @@ const db = getFirestore(app);
 
 // Analytics initialization (client-side only)
 let analytics: any = null;
+
 if (typeof window !== "undefined") {
-  const { getAnalytics, isSupported } = require("firebase/analytics");
-  isSupported().then((supported: boolean) => {
-    if (supported) {
-      analytics = getAnalytics(app);
+  (async () => {
+    try {
+      const { getAnalytics, isSupported } = await import("firebase/analytics");
+      if (await isSupported()) {
+        analytics = getAnalytics(app);
+      }
+    } catch (e) {
+      console.warn("Analytics initialization skipped:", e);
     }
-  });
+  })();
 }
 
 export { auth, db, analytics };
