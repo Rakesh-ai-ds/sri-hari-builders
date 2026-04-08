@@ -229,32 +229,52 @@ export const ContentManager = ({ section: initialSection, collectionName = "prog
           <p className="text-charcoal/40 uppercase tracking-widest text-xs font-bold font-serif italic text-lg">No updates found for this section yet.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-12">
           {items.map((item) => (
-            <div key={item.id} className="bg-white rounded-3xl overflow-hidden shadow-xl border border-charcoal/5 group transition-all hover:shadow-2xl hover:-translate-y-1">
-              <div className="relative h-64">
-                <Image src={item.imageUrl} alt={item.title || "Progress"} fill className="object-cover" />
-                <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div key={item.id} className="flex flex-col bg-white rounded-[32px] overflow-hidden shadow-xl border border-charcoal/5 group transition-all duration-500 hover:shadow-2xl hover:border-gold/20">
+              {/* Image Zone - High Precision Preview */}
+              <div className="relative h-60 w-full overflow-hidden">
+                <Image src={item.imageUrl} alt={item.title || "Progress"} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-charcoal/5 group-hover:bg-transparent transition-colors" />
+                
+                {/* Admin Actions - Sleek Floating Controls */}
+                <div className="absolute top-4 right-4 flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 transform translate-y-0 md:-translate-y-2 md:group-hover:translate-y-0">
                   <button 
                     onClick={() => openEdit(item)}
-                    className="p-3 bg-white text-charcoal rounded-xl shadow-lg hover:bg-gold hover:text-white transition-colors"
+                    className="p-3 bg-white/90 backdrop-blur-md text-charcoal rounded-xl shadow-lg hover:bg-gold hover:text-white transition-all transform hover:scale-110"
                   >
                     <Edit2 size={16} />
                   </button>
                   <button 
                     onClick={() => handleDelete(item.id)}
-                    className="p-3 bg-white text-red-500 rounded-xl shadow-lg hover:bg-red-500 hover:text-white transition-colors"
+                    className="p-3 bg-white/90 backdrop-blur-md text-red-500 rounded-xl shadow-lg hover:bg-red-500 hover:text-white transition-all transform hover:scale-110"
                   >
                     <Trash2 size={16} />
                   </button>
                 </div>
               </div>
-              <div className="p-8">
-                <h3 className="text-xl font-serif text-charcoal mb-4 capitalize">{item.title || "Construction Update"}</h3>
-                <p className="text-charcoal/60 text-sm leading-relaxed line-clamp-3">{item.description}</p>
-                <div className="mt-6 pt-6 border-t border-charcoal/5 flex justify-between items-center text-[10px] uppercase font-bold tracking-widest text-charcoal/30">
-                  <span>SHB Official</span>
-                  <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+
+              {/* Content Zone - 100% Text Visibility */}
+              <div className="p-8 flex-1 flex flex-col justify-between bg-charcoal/[0.02]">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="w-4 h-[1px] bg-gold" />
+                    <span className="text-gold uppercase tracking-[0.3em] text-[8px] font-bold">Verified entry</span>
+                  </div>
+                  <h3 className="text-xl font-serif text-charcoal leading-tight capitalize">
+                    {item.title || "Construction Update"}
+                  </h3>
+                  <p className="text-charcoal/60 text-xs leading-relaxed italic border-l-2 border-gold/10 pl-4 py-1">
+                    "{item.description}"
+                  </p>
+                </div>
+
+                <div className="mt-8 pt-6 border-t border-charcoal/5 flex justify-between items-center text-[8px] uppercase font-bold tracking-[0.2em] text-charcoal/30">
+                  <span className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                    SHB Official Record
+                  </span>
+                  <span>{new Date().toLocaleDateString(undefined, { month: 'short', year: 'numeric' })}</span>
                 </div>
               </div>
             </div>
