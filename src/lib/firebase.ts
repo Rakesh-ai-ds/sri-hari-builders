@@ -12,6 +12,11 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
+// Diagnostic for Dev
+if (typeof window !== "undefined" && !firebaseConfig.apiKey) {
+  console.warn("⚠️ Firebase API Key is missing. Did you restart 'npm run dev' after adding .env?");
+}
+
 // Initialize Firebase
 const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 const auth = getAuth(app);
