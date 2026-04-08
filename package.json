@@ -12,6 +12,7 @@
     "@react-three/drei": "^9.88.11",
     "@react-three/fiber": "^8.15.11",
     "autoprefixer": "10.4.17",
+    "firebase": "^12.11.0",
     "framer-motion": "^11.0.3",
     "gsap": "^3.12.5",
     "lenis": "^1.0.32",
@@ -21,6 +22,7 @@
     "postcss": "8.4.35",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hot-toast": "^2.6.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "3.4.1",
     "three": "^0.160.0"
@@ -29,6 +31,8 @@
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.2",
     "typescript": "^5.3.3"
   }
 }
