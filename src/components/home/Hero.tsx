@@ -40,7 +40,7 @@ export const Hero = () => {
           className="mb-6 flex justify-center"
         >
           <span className="px-4 py-1 border border-gold/50 text-gold text-[10px] md:text-xs uppercase tracking-[0.3em] backdrop-blur-md bg-gold/5 rounded-full">
-            Est. 1995 • Sri Hari Builders
+            Est. 2008 • Sri Hari Builder
           </span>
         </motion.div>
 

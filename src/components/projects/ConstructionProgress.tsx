@@ -133,13 +133,13 @@ export const ConstructionProgress = () => {
                       <div className="absolute inset-x-4 md:inset-x-6 bottom-4 md:bottom-6 p-6 md:p-8 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[24px] md:rounded-[32px] transform transition-all duration-700 ease-out">
                         <div className="flex flex-col gap-6">
                           <div>
-                            <div className="flex items-center gap-3 mb-4">
-                              <span className="w-8 h-[1px] bg-gold" />
-                              <span className="text-gold uppercase tracking-[0.4em] text-[10px] font-bold">
+                            <div className="flex items-center gap-3 mb-2">
+                              <span className="w-6 h-[1px] bg-gold" />
+                              <span className="text-gold uppercase tracking-[0.4em] text-[8px] font-bold">
                                 {stageName.replace("Progress", "")}
                               </span>
                             </div>
-                            <h3 className="text-white text-xl md:text-3xl font-serif leading-tight mb-2">
+                            <h3 className="text-white text-lg md:text-2xl font-serif leading-tight mb-1">
                               {item.title || "Engineering Update"}
                             </h3>
                             <p className="text-white/40 text-[10px] uppercase tracking-widest font-bold">
@@ -151,21 +151,21 @@ export const ConstructionProgress = () => {
                             </p>
                           </div>
 
-                          <p className="text-white/70 text-sm leading-relaxed italic line-clamp-2">
+                          <p className="text-white/70 text-xs leading-relaxed italic line-clamp-1">
                             "{item.description}"
                           </p>
 
                           {/* Specifications - Matching Portfolio Design */}
-                          <div className="pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
+                          <div className="pt-4 border-t border-white/10 grid grid-cols-2 gap-4">
                             <div>
-                              <p className="text-[8px] uppercase tracking-widest text-white/30 mb-1 font-bold">Milestone</p>
-                              <p className="text-gold text-xs font-serif uppercase tracking-wider">{stageName.split(" ")[0]}</p>
+                              <p className="text-[7px] uppercase tracking-widest text-white/30 mb-1 font-bold">Milestone</p>
+                              <p className="text-gold text-[10px] font-serif uppercase tracking-wider">{stageName.split(" ")[0]}</p>
                             </div>
                             <div>
-                              <p className="text-[8px] uppercase tracking-widest text-white/30 mb-1 font-bold">Verification</p>
+                              <p className="text-[7px] uppercase tracking-widest text-white/30 mb-1 font-bold">Verification</p>
                               <div className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                                <p className="text-white text-[10px] uppercase tracking-widest font-bold">SHB Official</p>
+                                <span className="w-1 h-1 rounded-full bg-gold animate-pulse" />
+                                <p className="text-white text-[8px] uppercase tracking-widest font-bold">SHB Official</p>
                               </div>
                             </div>
                           </div>

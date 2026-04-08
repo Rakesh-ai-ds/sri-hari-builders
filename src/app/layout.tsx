@@ -8,11 +8,11 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Sri Hari Builder & Promoters | Engineering Excellence & Iconic Landmarks in Coimbatore',
-  description: "Coimbatore's premier engineering house since 1995. Specializing in the construction of architectural landmarks and high-end residential estates with zero compromise on structural integrity.",
-  keywords: 'Sri Hari Builders, Construction Company Coimbatore, Engineering Excellence, Building Contractors, Premier Engineering House, Sri Hari Promoters, Coimbatore Construction',
+  description: "Coimbatore's premier engineering house since 2008. Specializing in the construction of architectural landmarks and high-end residential estates with zero compromise on structural integrity.",
+  keywords: 'Sri Hari Builder, Construction Company Coimbatore, Engineering Excellence, Building Contractors, Premier Engineering House, Sri Hari Promoters, Coimbatore Construction',
   openGraph: {
     title: 'Sri Hari Builder & Promoters | Premier Engineering House',
-    description: "Building generational legacies through architectural beauty and structural precision since 1995.",
+    description: "Building generational legacies through architectural beauty and structural precision since 2008.",
     url: 'https://sriharibuilders.com',
     siteName: 'Sri Hari Builder & Promoters',
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sri Hari Builder & Promoters | Engineering Excellence',
-    description: "Building generational legacies through architectural beauty and structural precision since 1995.",
+    description: "Building generational legacies through architectural beauty and structural precision since 2008.",
     images: ['/logo.png'],
   },
 };

@@ -99,7 +99,7 @@ export const Navbar = () => {
           </div>
           <div className="flex flex-col">
             <span className="text-lg md:text-2xl font-serif font-bold tracking-tighter text-gold leading-none">SRI HARI</span>
-            <span className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] text-white/40 leading-none mt-1">Builders & Promoters</span>
+            <span className="text-[7px] md:text-[8px] uppercase tracking-[0.4em] text-white/40 leading-none mt-1">Builder & Promoters</span>
           </div>
         </Link>
         
@@ -145,39 +145,43 @@ export const Navbar = () => {
             
             <div className="container mx-auto px-10 pt-32 pb-20 flex flex-col min-h-full">
               {/* Primary Links */}
-              <div className="space-y-6 mb-16">
+              <div className="mb-16">
                 <p className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold mb-8 opacity-50">Main Navigation</p>
-                {navLinks.map((link, idx) => (
-                  <motion.div
-                    key={link.name}
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.05 * idx }}
-                  >
-                    <Link 
-                      href={link.href} 
-                      onClick={() => setIsOpen(false)}
-                      className="text-4xl font-serif text-white hover:text-gold transition-colors inline-block"
-                    >
-                      {link.name}
-                    </Link>
+                <div className="space-y-6">
+                  {/* Home */}
+                  <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.1 }}>
+                    <Link href="/" onClick={() => setIsOpen(false)} className="text-4xl font-serif text-white hover:text-gold transition-colors">Home</Link>
                   </motion.div>
-                ))}
-              </div>
+                  
+                  {/* About */}
+                  <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.15 }}>
+                    <Link href="/about" onClick={() => setIsOpen(false)} className="text-4xl font-serif text-white hover:text-gold transition-colors">About</Link>
+                  </motion.div>
 
-              {/* Sub-Navigation Accordions */}
-              <div className="space-y-4 mb-16">
-                <MobileAccordion 
-                  title="Portfolio Categories" 
-                  items={["Luxury Apartments", "Modern Living", "Premium Villas"]}
-                  onItemClick={() => setIsOpen(false)}
-                />
-                
-                <MobileAccordion 
-                  title="Engineering Logs" 
-                  items={["Basement Level", "Lintel Level", "Sill Level", "Still Level"]}
-                  onItemClick={() => setIsOpen(false)}
-                />
+                  {/* Projects with Sub-menu */}
+                  <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.2 }} className="space-y-4">
+                    <MobileAccordion 
+                      title="Portfolio Categories" 
+                      items={["Luxury Apartments", "Modern Living", "Premium Villas"]}
+                      onItemClick={() => setIsOpen(false)}
+                    />
+                    <MobileAccordion 
+                      title="Engineering Logs" 
+                      items={["Basement Level", "Lintel Level", "Sill Level", "Still Level"]}
+                      onItemClick={() => setIsOpen(false)}
+                    />
+                  </motion.div>
+
+                  {/* Services */}
+                  <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.25 }}>
+                    <Link href="/services" onClick={() => setIsOpen(false)} className="text-4xl font-serif text-white hover:text-gold transition-colors">Services</Link>
+                  </motion.div>
+
+                  {/* Contact */}
+                  <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
+                    <Link href="/contact" onClick={() => setIsOpen(false)} className="text-4xl font-serif text-white hover:text-gold transition-colors">Contact</Link>
+                  </motion.div>
+                </div>
               </div>
 
               {/* Bottom Actions */}

@@ -28,7 +28,7 @@ export const AboutPreview = () => {
           </h2>
           
           <p className="text-off-white/80 text-lg leading-relaxed mb-10 max-w-xl">
-            Since 1995, Sri Hari Builder & Promoters has been the cornerstone of Coimbatore&apos;s skyline. We don&apos;t just build structures; we craft <span className="text-white font-bold italic">generational legacies</span> with engineering precision and absolute transparency. Your dream isn&apos;t just a project—it&apos;s our <span className="text-gold font-bold">reputation</span>.
+            Since 2008, Sri Hari Builder & Promoters has been the cornerstone of Coimbatore&apos;s skyline. We don&apos;t just build structures; we craft <span className="text-white font-bold italic">generational legacies</span> with engineering precision and absolute transparency. Your dream isn&apos;t just a project—it&apos;s our <span className="text-gold font-bold">reputation</span>.
           </p>
 
           <div className="grid grid-cols-2 gap-8 mb-12">
