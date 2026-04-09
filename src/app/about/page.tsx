@@ -20,7 +20,7 @@ export default function AboutPage() {
         <motion.div
            initial={{ opacity: 0, y: 30 }}
            animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 1 }}
+           transition={{ duration: 0.6 }}
         >
           <span className="text-gold uppercase tracking-[0.5em] text-xs font-bold mb-6 inline-block">The Legacy</span>
           <h1 className="text-4xl sm:text-5xl md:text-8xl font-serif leading-tight mb-12 text-white">
@@ -46,7 +46,7 @@ export default function AboutPage() {
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: idx * 0.1 }}
+                transition={{ duration: 0.5, delay: idx * 0.05 }}
                 viewport={{ once: true }}
                 className={`relative flex items-center mb-24 last:mb-0 ${
                   idx % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
@@ -77,7 +77,7 @@ export default function AboutPage() {
            <motion.div
              initial={{ opacity: 0, x: -30 }}
              whileInView={{ opacity: 1, x: 0 }}
-             transition={{ duration: 1 }}
+             transition={{ duration: 0.6 }}
              viewport={{ once: true }}
              className="p-12 bg-white/[0.03] border border-white/10 rounded-[40px] backdrop-blur-xl relative overflow-hidden group hover:border-gold/30 transition-all duration-700"
            >
@@ -98,7 +98,7 @@ export default function AboutPage() {
            <motion.div
              initial={{ opacity: 0, x: 30 }}
              whileInView={{ opacity: 1, x: 0 }}
-             transition={{ duration: 1 }}
+             transition={{ duration: 0.6 }}
              viewport={{ once: true }}
              className="p-12 bg-white/[0.03] border border-white/10 rounded-[40px] backdrop-blur-xl relative overflow-hidden group hover:border-gold/30 transition-all duration-700"
            >
@@ -125,7 +125,7 @@ export default function AboutPage() {
              <motion.div
                initial={{ opacity: 0, scale: 0.9 }}
                whileInView={{ opacity: 1, scale: 1 }}
-               transition={{ duration: 1.2 }}
+               transition={{ duration: 0.7 }}
                viewport={{ once: true }}
                className="relative"
              >
@@ -144,7 +144,7 @@ export default function AboutPage() {
                <motion.div 
                  initial={{ y: 20, opacity: 0 }}
                  whileInView={{ y: 0, opacity: 1 }}
-                 transition={{ delay: 0.5 }}
+                 transition={{ delay: 0.2 }}
                  className="absolute -bottom-10 -right-6 md:bottom-20 md:-right-10 bg-gold p-8 md:p-12 rounded-[40px] shadow-2xl border-8 border-charcoal max-w-[280px]"
                >
                  <div className="flex flex-col gap-2">
@@ -157,7 +157,7 @@ export default function AboutPage() {
              <motion.div
                initial={{ opacity: 0, x: 50 }}
                whileInView={{ opacity: 1, x: 0 }}
-               transition={{ duration: 1 }}
+               transition={{ duration: 0.6 }}
                viewport={{ once: true }}
                className="space-y-12"
              >

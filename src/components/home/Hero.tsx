@@ -34,9 +34,9 @@ export const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-20 text-center px-6 max-w-full overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="mb-6 flex justify-center"
         >
           <span className="px-4 py-1 border border-gold/50 text-gold text-[10px] md:text-xs uppercase tracking-[0.3em] backdrop-blur-md bg-gold/5 rounded-full">
@@ -51,16 +51,16 @@ export const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
           className="text-off-white text-base md:text-2xl max-w-3xl mx-auto font-light leading-relaxed mb-12 px-4"
         >
           Stop settling for ordinary. Experience <span className="text-white font-bold underline decoration-gold/50 underline-offset-8">18 Years</span> of engineering precision that transforms your vision into a stable, <span className="text-white font-bold">world-class sanctuary</span>.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
         >
           <Link href="/about" className="group relative px-10 py-4 bg-gold text-charcoal font-bold uppercase tracking-widest text-xs transition-all duration-300 hover:pr-14 overflow-hidden">

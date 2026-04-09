@@ -154,18 +154,7 @@ export function ProgressContent() {
         {/* Content Display */}
         <div className="relative">
           <AnimatePresence mode="wait">
-            {loading ? (
-              <motion.div 
-                key="loader"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="flex flex-col items-center justify-center py-24 gap-4"
-              >
-                <Loader2 className="animate-spin text-gold" size={48} />
-                <span className="text-xs uppercase tracking-[0.3em] text-gold/60 font-serif italic">Accessing Live Data</span>
-              </motion.div>
-            ) : items.length === 0 ? (
+            {items.length === 0 ? (
               <motion.div 
                 key="empty"
                 initial={{ opacity: 0, y: 20 }}
@@ -192,7 +181,7 @@ export function ProgressContent() {
                     animate={{ 
                       opacity: 1, 
                       y: 0,
-                      transition: { delay: index * 0.1, duration: 0.8, ease: "easeOut" } 
+                      transition: { delay: index * 0.05, duration: 0.5, ease: "easeOut" } 
                     }}
                     className="group relative"
                   >
