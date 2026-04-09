@@ -62,7 +62,7 @@ export const Navbar = () => {
                     <Link
                       href={item.href}
                       onClick={() => { setActive(item.id); onItemClick(); }}
-                      className={`group flex items-center px-6 py-4 transition-all duration-300 ${
+                      className={`group flex items-center px-6 py-2.5 transition-all duration-300 ${
                         active === item.id 
                           ? 'bg-gold/10 border-r-4 border-gold' 
                           : 'hover:bg-white/5'
@@ -153,11 +153,11 @@ export const Navbar = () => {
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
             
-            <div className="container mx-auto px-10 pt-32 pb-20 flex flex-col min-h-full">
+            <div className="container mx-auto px-8 pt-24 pb-32 flex flex-col min-h-screen">
               {/* Primary Links */}
-              <div className="mb-16">
-                <p className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold mb-8 opacity-50">Main Navigation</p>
-                <div className="space-y-6">
+              <div className="mb-12">
+                <p className="text-[9px] uppercase tracking-[0.4em] text-gold font-bold mb-6 opacity-50">Main Navigation</p>
+                <div className="space-y-5">
                   {/* Home */}
                   <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.1 }}>
                     <Link href="/" onClick={() => setIsOpen(false)} className="text-4xl font-serif text-white hover:text-gold transition-colors">Home</Link>
@@ -190,7 +190,7 @@ export const Navbar = () => {
 
                   {/* Contact */}
                   <motion.div initial={{ x: -20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
-                    <Link href="/contact" onClick={() => setIsOpen(false)} className="text-4xl font-serif text-white hover:text-gold transition-colors">Contact</Link>
+                    <Link href="/contact" onClick={() => setIsOpen(false)} className="text-3xl font-serif text-white hover:text-gold transition-colors">Contact</Link>
                   </motion.div>
                 </div>
               </div>
