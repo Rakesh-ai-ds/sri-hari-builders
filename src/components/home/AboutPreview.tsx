@@ -24,7 +24,7 @@ export const AboutPreview = () => {
           </div>
           
           <h2 className="text-4xl md:text-6xl font-serif leading-tight mb-8">
-            35 Years of <span className="text-gold underline decoration-white/20 underline-offset-8">Unshakable Trust</span>.
+            18 Years of <span className="text-gold underline decoration-white/20 underline-offset-8">Unshakable Trust</span>.
           </h2>
           
           <p className="text-off-white/80 text-lg leading-relaxed mb-10 max-w-xl">

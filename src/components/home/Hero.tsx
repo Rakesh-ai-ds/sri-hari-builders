@@ -54,7 +54,7 @@ export const Hero = () => {
           transition={{ delay: 1.2, duration: 1 }}
           className="text-off-white text-base md:text-2xl max-w-3xl mx-auto font-light leading-relaxed mb-12 px-4"
         >
-          Stop settling for ordinary. Experience <span className="text-white font-bold underline decoration-gold/50 underline-offset-8">35 years</span> of engineering precision that transforms your vision into a stable, <span className="text-white font-bold">world-class sanctuary</span>.
+          Stop settling for ordinary. Experience <span className="text-white font-bold underline decoration-gold/50 underline-offset-8">18 Years</span> of engineering precision that transforms your vision into a stable, <span className="text-white font-bold">world-class sanctuary</span>.
         </motion.p>
 
         <motion.div

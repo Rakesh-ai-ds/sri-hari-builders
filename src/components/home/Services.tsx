@@ -33,7 +33,7 @@ const services = [
   },
   {
     title: "Expert Consulting",
-    description: "35 years of wisdom at your service. Avoid costly mistakes with our professional project guidance and valuation.",
+    description: "18 Years of wisdom at your service. Avoid costly mistakes with our professional project guidance and valuation.",
     icon: <Hammer className="w-8 h-8 text-gold" />,
   },
 ];
