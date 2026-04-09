@@ -90,7 +90,7 @@ export const Navbar = () => {
   return (
     <>
       <motion.nav
-        className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-300 ${
+        className={`fixed inset-x-0 top-0 z-[80] flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-300 ${
           scrolled || isOpen ? "bg-charcoal/90 backdrop-blur-xl shadow-glass py-3" : "bg-transparent"
         }`}
         initial={{ y: -100 }}
@@ -178,6 +178,7 @@ export const Navbar = () => {
                         { id: 'basement-level', name: "Basement Level", href: "/projects?category=basement-level", icon: Construction },
                         { id: 'lintel-level', name: "Lintel Level", href: "/projects?category=lintel-level", icon: Layers },
                         { id: 'sill-level-concrete', name: "Sill Level", href: "/projects?category=sill-level-concrete", icon: Hammer },
+                        { id: 'still-level-concrete', name: "Still Level", href: "/projects?category=still-level-concrete", icon: Smartphone },
                       ]}
                       onItemClick={() => setIsOpen(false)}
                     />
