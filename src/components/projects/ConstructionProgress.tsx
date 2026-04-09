@@ -86,11 +86,11 @@ export function ProgressContent() {
     const targetStage = STAGES.find(s => s.id === activeStage);
     const colName = targetStage?.collection || "progress";
     
-    const q = query(
-      collection(db, colName),
-      where("section", "==", activeStage),
-      orderBy("createdAt", "desc")
-    );
+    // Build specialized queries: 
+    // Portfolio is collection-wide; Progress is section-specific
+    const q = activeStage === "portfolio"
+      ? query(collection(db, colName), orderBy("createdAt", "desc"))
+      : query(collection(db, colName), where("section", "==", activeStage), orderBy("createdAt", "desc"));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const firebaseData = snapshot.docs.map(doc => ({
@@ -108,7 +108,7 @@ export function ProgressContent() {
         finalData = [...firebaseData, ...uniqueStatic];
       }
 
-      // Universal Shuffle for all categories
+      // Universal Shuffle for all categories - ensures fresh look on every load
       if (finalData.length > 0) {
         finalData = shuffleArray(finalData);
       }
@@ -117,6 +117,11 @@ export function ProgressContent() {
       setLoading(false);
     }, (error) => {
       console.error("Error fetching progress:", error);
+      
+      // Fallback for Portfolio even on Error
+      if (activeStage === "portfolio") {
+        setItems(shuffleArray([...STATIC_PROJECTS]) as ProgressItem[]);
+      }
       setLoading(false);
     });
 
