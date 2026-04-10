@@ -64,31 +64,31 @@ export const VideoMarquee = () => {
               className="inline-block px-4 w-[300px] md:w-[450px]"
             >
               <motion.div
-                whileHover={{ scale: 1.02, y: -10 }}
-                className="relative aspect-video rounded-3xl overflow-hidden group cursor-pointer border border-white/5 shadow-2xl"
+                whileHover={{ scale: 1.02 }}
+                className="relative aspect-video rounded-3xl overflow-hidden group cursor-pointer border border-white/10 shadow-2xl bg-black"
                 onClick={() => setSelectedVideo(video)}
               >
                 <Image 
                   src={video.thumbnail} 
                   alt={video.title}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/10 transition-colors duration-500" />
+                {/* Overlay - Subtle darker bottom for text readability */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent transition-opacity duration-500" />
                 
-                {/* Content Overlay */}
-                <div className="absolute inset-0 p-8 flex flex-col justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                {/* Content Overlay - Always Visible */}
+                <div className="absolute inset-0 p-8 flex flex-col justify-between">
                   <div className="flex justify-end">
-                    <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center text-charcoal shadow-xl">
-                      <Play size={20} fill="currentColor" />
+                    <div className="w-14 h-14 bg-gold text-charcoal rounded-full flex items-center justify-center shadow-2xl scale-110">
+                      <Play size={24} fill="currentColor" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-white text-lg font-serif mb-2">{video.title}</h3>
-                    <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gold font-bold">
-                      <Youtube size={12} /> Play Milestone
+                    <h3 className="text-white text-xl md:text-2xl font-serif font-bold mb-2 drop-shadow-lg">{video.title}</h3>
+                    <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-gold font-black">
+                      <Youtube size={14} /> Play Showcase
                     </div>
                   </div>
                 </div>
@@ -127,19 +127,14 @@ export const VideoMarquee = () => {
                 allowFullScreen
               />
               
-              <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center pointer-events-none">
-                <div className="p-4 bg-charcoal/60 backdrop-blur-md border border-white/10 rounded-2xl pointer-events-auto">
-                  <h4 className="text-white font-serif text-xl mb-1">{selectedVideo.title}</h4>
-                  <p className="text-white/40 text-[10px] uppercase tracking-widest">Official Project Chronicle • Sri Hari Builder & Promoters</p>
-                </div>
-                
+              <div className="absolute bottom-10 right-10 flex justify-end items-center pointer-events-none">
                 <a 
                   href={`https://www.youtube.com/watch?v=${selectedVideo.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 bg-gold text-charcoal rounded-2xl flex items-center gap-3 text-xs font-bold uppercase tracking-widest hover:scale-105 transition-transform pointer-events-auto shadow-2xl shadow-gold/20"
+                  className="p-5 bg-gold text-charcoal rounded-2xl flex items-center gap-3 text-xs font-black uppercase tracking-widest hover:scale-105 transition-transform pointer-events-auto shadow-2xl shadow-gold/40"
                 >
-                  <ExternalLink size={16} /> Open in YouTube
+                  <ExternalLink size={18} /> Open in YouTube
                 </a>
               </div>
             </div>
