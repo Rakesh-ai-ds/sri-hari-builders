@@ -12,11 +12,11 @@ interface Video {
 }
 
 const VIDEOS: Video[] = [
-  { id: "MpSzDpae6-k", title: "Engineering Excellence", thumbnail: "https://img.youtube.com/vi/MpSzDpae6-k/maxresdefault.jpg" },
-  { id: "EY6Olw6EW4I", title: "Architectural Grandeur", thumbnail: "https://img.youtube.com/vi/EY6Olw6EW4I/maxresdefault.jpg" },
-  { id: "suxoAdJKwwk", title: "Structural Precision", thumbnail: "https://img.youtube.com/vi/suxoAdJKwwk/maxresdefault.jpg" },
-  { id: "Oy2wN-edaD4", title: "Luxury Living", thumbnail: "https://img.youtube.com/vi/Oy2wN-edaD4/maxresdefault.jpg" },
-  { id: "LXg9_b28Wu8", title: "Crafting Legacy", thumbnail: "https://img.youtube.com/vi/LXg9_b28Wu8/maxresdefault.jpg" },
+  { id: "MpSzDpae6-k", title: "Engineering Excellence", thumbnail: "https://img.youtube.com/vi/MpSzDpae6-k/hqdefault.jpg" },
+  { id: "EY6Olw6EW4I", title: "Architectural Grandeur", thumbnail: "https://img.youtube.com/vi/EY6Olw6EW4I/hqdefault.jpg" },
+  { id: "suxoAdJKwwk", title: "Structural Precision", thumbnail: "https://img.youtube.com/vi/suxoAdJKwwk/hqdefault.jpg" },
+  { id: "Oy2wN-edaD4", title: "Luxury Living", thumbnail: "https://img.youtube.com/vi/Oy2wN-edaD4/hqdefault.jpg" },
+  { id: "LXg9_b28Wu8", title: "Crafting Legacy", thumbnail: "https://img.youtube.com/vi/LXg9_b28Wu8/hqdefault.jpg" },
 ];
 
 export const VideoMarquee = () => {
