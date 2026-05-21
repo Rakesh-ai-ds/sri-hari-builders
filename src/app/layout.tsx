@@ -65,13 +65,24 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 "image": "https://www.sriharibuilder.com/logo.png",
                 "description": "Coimbatore's leading engineering house and construction experts, building architectural landmarks and premium residential projects since 2008.",
                 "foundingDate": "2008",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "7th Street Extension",
-                  "addressLocality": "Gandhipuram",
-                  "addressRegion": "Tamil Nadu",
-                  "addressCountry": "IN"
-                },
+                "address": [
+                  {
+                    "@type": "PostalAddress",
+                    "streetAddress": "No 133, Near Ramanis Appartment, Amarar Jevanatham Road, 7th Street Ext",
+                    "addressLocality": "Coimbatore",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "641012",
+                    "addressCountry": "IN"
+                  },
+                  {
+                    "@type": "PostalAddress",
+                    "streetAddress": "133-Amarar jevanthan road, 7th Street Extn, Gandhipuram",
+                    "addressLocality": "Coimbatore",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "641027",
+                    "addressCountry": "IN"
+                  }
+                ],
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "telephone": "+91 9787081184",

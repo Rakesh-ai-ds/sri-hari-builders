@@ -67,8 +67,17 @@ export const Footer = () => {
           <h4 className="text-lg font-serif text-gold mb-6 uppercase tracking-widest text-sm">Connect</h4>
           <ul className="space-y-4 text-sm text-off-white/80">
             <li className="flex items-start space-x-3">
-              <MapPin size={18} className="text-gold" />
-              <span>No 133, Near Ramanis Appartment,<br />Amarar Jevanatham Road, 7th Street Ext,<br />Coimbatore, Tamil Nadu 641012</span>
+              <MapPin size={18} className="text-gold flex-shrink-0 mt-1" />
+              <div className="space-y-4">
+                <div>
+                  <span className="block text-[11px] font-semibold text-gold/75 uppercase tracking-wider mb-1">Registered Office</span>
+                  <span>No 133, Near Ramanis Appartment,<br />Amarar Jevanatham Road, 7th Street Ext,<br />Coimbatore, Tamil Nadu 641012</span>
+                </div>
+                <div className="border-t border-white/10 pt-3">
+                  <span className="block text-[11px] font-semibold text-gold/75 uppercase tracking-wider mb-1">Branch Office</span>
+                  <span>133-Amarar jevanthan road,<br />7th Street Extn, Gandhipuram,<br />Coimbatore - 641027</span>
+                </div>
+              </div>
             </li>
             <li className="flex items-center space-x-3">
               <Phone size={18} className="text-gold" />

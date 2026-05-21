@@ -58,19 +58,27 @@ export default function ContactPage() {
 
           <div className="space-y-12">
             <div className="flex items-start gap-8 group text-left">
-              <div className="p-4 bg-charcoal text-gold rounded-2xl group-hover:bg-gold group-hover:text-charcoal transition-all duration-500">
+              <div className="p-4 bg-charcoal text-gold rounded-2xl group-hover:bg-gold group-hover:text-charcoal transition-all duration-500 flex-shrink-0">
                 <MapPin size={24} />
               </div>
-              <div>
-                <h4 className="text-lg font-serif text-charcoal mb-2 uppercase tracking-widest text-xs">Our Presence</h4>
-                <a 
-                  href="https://share.google/DyjsYyYXRiFtDiqUV" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-charcoal/80 text-lg hover:text-gold transition-colors block leading-relaxed"
-                >
-                  No 133, Near Ramanis Appartment,<br />Amarar Jevanatham Road, 7th Street Ext,<br />Coimbatore, Tamil Nadu 641012
-                </a>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-lg font-serif text-charcoal mb-2 uppercase tracking-widest text-xs font-bold text-gold">Registered Office</h4>
+                  <a 
+                    href="https://share.google/DyjsYyYXRiFtDiqUV" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-charcoal/80 text-lg hover:text-gold transition-colors block leading-relaxed"
+                  >
+                    No 133, Near Ramanis Appartment,<br />Amarar Jevanatham Road, 7th Street Ext,<br />Coimbatore, Tamil Nadu 641012
+                  </a>
+                </div>
+                <div className="border-t border-charcoal/10 pt-4">
+                  <h4 className="text-lg font-serif text-charcoal mb-2 uppercase tracking-widest text-xs font-bold text-gold">Branch Office</h4>
+                  <p className="text-charcoal/80 text-lg leading-relaxed">
+                    133-Amarar jevanthan road,<br />7th Street Extn, Gandhipuram,<br />Coimbatore - 641027
+                  </p>
+                </div>
               </div>
             </div>
             <div className="flex items-start gap-8 group text-left">
